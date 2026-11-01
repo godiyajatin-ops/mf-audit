@@ -1,0 +1,42 @@
+window:
+  start: null
+  end: null
+  years: 5
+
+amcs_in_aum_rank_order: []
+
+categories:
+  - Large Cap
+  - Flexi Cap
+  - Mid Cap
+
+active_per_category: 4
+passive_count: 4
+
+benchmark_default_map:
+  Large Cap: NIFTY 100 TRI
+  Flexi Cap: NIFTY 500 TRI
+  Mid Cap: NIFTY MIDCAP 150 TRI
+  Index: NIFTY 50 TRI
+
+rf:
+  source: null
+  fallback_constant: 0.06
+  note: "ASSUMPTION placeholder; replace if series obtained"
+
+fdr_q: 0.10
+nw_lag: auto
+control_band_pp: 1.0
+
+audit:
+  r2_min: 0.85
+  peer_sd: 1.5
+  cost_tol_pp: 0.30
+  passive_te_max: 0.01
+
+rag:
+  chunking: section
+  top_k: 5
+  fusion_k: 60
+
+seed: 42

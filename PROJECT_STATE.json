@@ -1,0 +1,24 @@
+{
+  "project": "mf-audit",
+  "stages": {
+    "0": {"status": "IN_PROGRESS", "updated": null, "notes": "Stage 0 execution started."},
+    "A1": {"status": "TODO", "updated": null, "notes": ""},
+    "A2": {"status": "TODO", "updated": null, "notes": ""},
+    "A3": {"status": "TODO", "updated": null, "notes": ""},
+    "A4": {"status": "TODO", "updated": null, "notes": ""},
+    "B1": {"status": "TODO", "updated": null, "notes": ""},
+    "B2": {"status": "TODO", "updated": null, "notes": ""},
+    "C": {"status": "TODO", "updated": null, "notes": ""}
+  },
+  "decisions": {
+    "prereg_approved": false,
+    "prereg_approved_at": null,
+    "survivorship_note": null,
+    "rf_source": null,
+    "benchmark_confirmation_waived": false,
+    "crosscheck_waived": false,
+    "dashboard_path": null,
+    "llm_mode": null
+  },
+  "human_pending": []
+}

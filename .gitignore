@@ -1,0 +1,13 @@
+.venv/
+.env
+data/raw/
+data/raw_docs/
+data/processed/
+data/index/
+data/cache/
+logs/
+*.pdf
+*.parquet
+__pycache__/
+.pytest_cache/
+.ruff_cache/
