@@ -2,14 +2,14 @@
   "project": "mf-audit",
   "stages": {
     "0": {
-      "status": "IN_PROGRESS",
-      "updated": null,
-      "notes": "Stage 0 execution started."
+      "status": "COMPLETE_WITH_LIMITATIONS",
+      "updated": "2026-11-02T22:26:18Z",
+      "notes": "Stage 0 closed. Preregistration approved and tagged. Feasibility limitations are documented in docs/feasibility_findings.md and reports/stage_0_report.md."
     },
     "A1": {
-      "status": "TODO",
+      "status": "READY",
       "updated": null,
-      "notes": ""
+      "notes": "Ready to begin data pipeline and warehouse work after Stage 0 handoff."
     },
     "A2": {
       "status": "TODO",
