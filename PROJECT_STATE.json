@@ -43,8 +43,8 @@
     }
   },
   "decisions": {
-    "prereg_approved": false,
-    "prereg_approved_at": null,
+    "prereg_approved": true,
+    "prereg_approved_at": "2026-11-02T22:23:06Z",
     "survivorship_note": "UNCLEAR: Five-code survivorship probe was inconclusive. Historical codes absent from the current master were identified, but historical retrieval and closure/merger status were not conclusively established.",
     "rf_source": "constant_assumption",
     "benchmark_confirmation_waived": false,
