@@ -1,0 +1,33 @@
+scheme_code,pair_id,scheme_name,amc,category,plan,is_passive,group
+119018,1,HDFC Large Cap Fund,HDFC Mutual Fund,Large Cap,Direct,False,Active
+102000,1,HDFC Large Cap Fund,HDFC Mutual Fund,Large Cap,Regular,False,Active
+120586,2,ICICI Prudential Large Cap Fund (erstwhile Bluechip Fund),ICICI Prudential Mutual Fund,Large Cap,Direct,False,Active
+108466,2,ICICI Prudential Large Cap Fund (erstwhile Bluechip Fund),ICICI Prudential Mutual Fund,Large Cap,Regular,False,Active
+119598,3,SBI Large Cap Fund,SBI Mutual Fund,Large Cap,Direct,False,Active
+103504,3,SBI Large Cap Fund,SBI Mutual Fund,Large Cap,Regular,False,Active
+118632,4,Nippon India Large Cap Fund,Nippon India Mutual Fund,Large Cap,Direct,False,Active
+106235,4,Nippon India Large Cap Fund,Nippon India Mutual Fund,Large Cap,Regular,False,Active
+118955,5,HDFC Flexi Cap Fund,HDFC Mutual Fund,Flexi Cap,Direct,False,Active
+101762,5,HDFC Flexi Cap Fund,HDFC Mutual Fund,Flexi Cap,Regular,False,Active
+148990,6,ICICI Prudential Flexi Cap fund,ICICI Prudential Mutual Fund,Flexi Cap,Direct,False,Active
+148989,6,ICICI Prudential Flexi Cap fund,ICICI Prudential Mutual Fund,Flexi Cap,Regular,False,Active
+119718,7,SBI FLEXICAP FUND,SBI Mutual Fund,Flexi Cap,Direct,False,Active
+103215,7,SBI FLEXICAP FUND,SBI Mutual Fund,Flexi Cap,Regular,False,Active
+149094,8,Nippon India Flexi Cap Fund,Nippon India Mutual Fund,Flexi Cap,Direct,False,Active
+149089,8,Nippon India Flexi Cap Fund,Nippon India Mutual Fund,Flexi Cap,Regular,False,Active
+118989,9,HDFC Mid Cap Fund,HDFC Mutual Fund,Mid Cap,Direct,False,Active
+105758,9,HDFC Mid Cap Fund,HDFC Mutual Fund,Mid Cap,Regular,False,Active
+120381,10,ICICI Prudential Mid Cap Fund,ICICI Prudential Mutual Fund,Mid Cap,Direct,False,Active
+102528,10,ICICI Prudential Mid Cap Fund,ICICI Prudential Mutual Fund,Mid Cap,Regular,False,Active
+119716,11,SBI MIDCAP FUND,SBI Mutual Fund,Mid Cap,Direct,False,Active
+102941,11,SBI MIDCAP FUND,SBI Mutual Fund,Mid Cap,Regular,False,Active
+118668,12,Nippon India Growth Mid Cap Fund,Nippon India Mutual Fund,Mid Cap,Direct,False,Active
+100377,12,Nippon India Growth Mid Cap Fund,Nippon India Mutual Fund,Mid Cap,Regular,False,Active
+119063,13,HDFC Nifty 50 Index Fund,HDFC Mutual Fund,Index,Direct,True,Passive
+101525,13,HDFC Nifty 50 Index Fund,HDFC Mutual Fund,Index,Regular,True,Passive
+118741,14,Nippon India Index Fund - Nifty 50 Plan,Nippon India Mutual Fund,Index,Direct,True,Passive
+113296,14,Nippon India Index Fund - Nifty 50 Plan,Nippon India Mutual Fund,Index,Regular,True,Passive
+148978,15,Kotak Nifty 50 Index Fund,Kotak Mahindra Mutual Fund,Index,Direct,True,Passive
+148974,15,Kotak Nifty 50 Index Fund,Kotak Mahindra Mutual Fund,Index,Regular,True,Passive
+120684,16,ICICI Prudential Nifty Next 50 Index Fund,ICICI Prudential Mutual Fund,Index,Direct,True,Passive
+112957,16,ICICI Prudential Nifty Next 50 Index Fund,ICICI Prudential Mutual Fund,Index,Regular,True,Passive
