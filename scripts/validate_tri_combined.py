@@ -55,3 +55,22 @@ for index_name, group in data.groupby("IndexName"):
                 ["Date", "Total Returns Index", "Source File"]
             ].to_string(index=False)
         )
+
+
+
+print("\nFINAL TRI VALIDATION SUMMARY")
+print("-" * 55)
+
+for index_name, group in data.groupby("IndexName"):
+    unique_dates = group.drop_duplicates("Date")
+
+    print(
+        f"{index_name}: "
+        f"{unique_dates['Date'].min().date()} to "
+        f"{unique_dates['Date'].max().date()} | "
+        f"{len(unique_dates)} unique dates | "
+        f"{group['Date'].duplicated().sum()} duplicate records"
+    )
+
+print("\nTotal indices:", data["IndexName"].nunique())
+print("Total raw CSV files:", len(list(folder.glob("*.csv"))))
