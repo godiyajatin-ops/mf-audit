@@ -45,8 +45,3 @@ rag:
   fusion_k: 60
 
 seed: 42
-
-rf:
-  source: fallback_constant
-  fallback_constant: 0.06
-  note: "Assumed constant annual risk-free rate. Mandatory sensitivity checks at 5% and 7% in Stage A3."
