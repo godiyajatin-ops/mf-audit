@@ -77,3 +77,62 @@ No historical RBI 91-day Treasury Bill yield series was incorporated during Stag
 - The approved research design must not be changed except through a dated amendment.
 
 Stage 0 conclusion: feasibility work is complete with the limitations above carried forward into subsequent stages.
+
+
+
+## Stage A1 — Data Quality and Feasibility Findings
+
+### Benchmark Alignment
+
+| Metric | Result |
+|---|---:|
+| Eligible NAV observations | 29,586 |
+| Exact-date aligned observations | 29,460 |
+| Unmatched observations | 126 |
+| Alignment percentage | 99.574% |
+| Minimum acceptance threshold | 98% |
+
+The observed alignment percentage exceeds the predefined 98% threshold.
+
+Alignment is calculated only for schemes whose benchmark TRI series is available.
+
+### Benchmark Coverage Limitation
+
+Seven benchmark records exist in the database, but historical TRI observations are currently available for only five:
+
+1. NIFTY 50 TRI
+2. NIFTY 100 TRI
+3. NIFTY 500 TRI
+4. NIFTY MIDCAP 150 TRI
+5. NIFTY NEXT 50 TRI
+
+Historical TRI observations are currently unavailable for:
+
+- BSE 100 TRI
+- BSE 500 TRI
+
+Eight schemes depend on these two BSE benchmarks.
+
+Consequently:
+- 24 of 32 schemes currently have benchmark-series coverage.
+- 8 schemes cannot yet be evaluated against their stated benchmarks.
+- BSE price-index data has not been substituted for TRI data.
+- Missing benchmark observations have not been forward-filled.
+
+### Risk-Free Rate Limitation
+
+A constant annual risk-free rate of 6% is used as a fallback.
+
+This is an assumption rather than an observed historical risk-free time series.
+
+Stage A3 must include sensitivity analysis using 5% and 7%.
+
+### Feasibility Conclusion
+
+Stage A1 database ingestion and benchmark alignment satisfy the 98% alignment threshold for schemes with available benchmark data.
+
+The pipeline is operational and repeatable.
+
+However, benchmark-relative analysis for the eight BSE-dependent schemes remains pending until valid historical BSE TRI observations are obtained.
+
+These limitations must be carried forward into subsequent analysis and reporting.

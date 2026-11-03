@@ -54,3 +54,40 @@
   },
   "human_pending": []
 }
+
+
+{
+  "stage_a1": {
+    "status": "implementation_completed",
+    "database_loading": "completed",
+    "alignment_validation": "passed",
+    "alignment_percentage": 99.574,
+    "alignment_threshold": 98.0,
+    "eligible_nav_observations": 29586,
+    "aligned_observations": 29460,
+    "scheme_count": 32,
+    "nav_observations": 39478,
+    "benchmark_tri_observations": 6192,
+    "benchmark_metadata_count": 7,
+    "risk_free_observations": 1241,
+    "risk_free_method": "fallback_constant",
+    "risk_free_annual_rate": 0.06,
+    "idempotence": "passed",
+    "benchmark_coverage": {
+      "available_benchmarks": 5,
+      "total_benchmarks": 7,
+      "covered_schemes": 24,
+      "total_schemes": 32,
+      "pending_benchmarks": [
+        "BSE 100 TRI",
+        "BSE 500 TRI"
+      ],
+      "pending_schemes": 8
+    },
+    "limitations": [
+      "Historical BSE 100 TRI data unavailable",
+      "Historical BSE 500 TRI data unavailable",
+      "Risk-free rate uses a constant 6 percent fallback"
+    ]
+  }
+}
