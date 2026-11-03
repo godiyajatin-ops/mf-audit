@@ -11,3 +11,9 @@ logs/
 __pycache__/
 .pytest_cache/
 .ruff_cache/
+
+# Local datasets and generated data
+data/
+
+# Local VS Code workspace settings
+.vscode/
