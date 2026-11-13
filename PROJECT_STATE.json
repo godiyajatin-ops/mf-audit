@@ -42,16 +42,28 @@
       "notes": ""
     }
   },
-  "decisions": {
-    "prereg_approved": true,
-    "prereg_approved_at": "2026-11-02T22:23:06Z",
-    "survivorship_note": "UNCLEAR: Five-code survivorship probe was inconclusive. Historical codes absent from the current master were identified, but historical retrieval and closure/merger status were not conclusively established.",
-    "rf_source": "constant_assumption",
-    "benchmark_confirmation_waived": false,
-    "crosscheck_waived": false,
-    "dashboard_path": null,
-    "llm_mode": null
-  },
+ "decisions": {
+  "prereg_approved": true,
+  "prereg_approved_at": "2026-11-02T22:23:06Z",
+  "survivorship_note": "UNCLEAR: Five-code survivorship probe was inconclusive. Historical codes absent from the current master were identified, but historical retrieval and closure/merger status were not conclusively established.",
+  "rf_source": "constant_assumption",
+  "bse_tri_unavailable": true,
+  "bse_series_basis": "estimated_hybrid",
+  "bse_sensitivity": "proxy_nifty",
+  "bse_decision_recorded_at": "2026-11-13T17:32:00+05:30",
+  "bse_methodological_deviation": true,
+  "bse_deviation_note": "The preregistered BSE 100 TRI and BSE 500 TRI series were unavailable. A provisional estimated hybrid series using BSE price returns and the matching NIFTY TRI/price dividend wedge will be used as the primary provisional series. Matching NIFTY TRI will be used for sensitivity analysis. Original benchmark identities and scheme mappings remain unchanged. This is a documented methodological deviation, not an unchanged confirmatory implementation of the original benchmark specification.",
+  "bse_source_priority": [
+    "real_bse_tri",
+    "estimated_hybrid",
+    "proxy_nifty"
+  ],
+  "bse_swap_rule": "When actual BSE TRI becomes available, use it as primary, rerun affected analyses, and report estimated-versus-actual tracking differences.",
+  "benchmark_confirmation_waived": false,
+  "crosscheck_waived": false,
+  "dashboard_path": null,
+  "llm_mode": null
+},
   "human_pending": [
     "Stage A1: resolve the incomplete pytest test collection; the prior A1 pytest invocation collected no tests. Do not treat this as resolved by the separate passing A2 tests."
   ]
