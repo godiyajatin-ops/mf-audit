@@ -39,11 +39,13 @@ alignment,102941.0,PASS,Alignment=98.87%
 nav_gap,102941.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,102941.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,103215.0,PASS,"First=2021-11-01, last=2026-10-30"
-benchmark_coverage,103215.0,WARN,Benchmark ID 7 has no TRI observations; benchmark-relative metrics unavailable
+benchmark_coverage,103215.0,PASS,Benchmark ID 7: 1236 TRI rows
+alignment,103215.0,PASS,Alignment=98.79%
 nav_gap,103215.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,103215.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,103504.0,PASS,"First=2021-11-01, last=2026-10-30"
-benchmark_coverage,103504.0,WARN,Benchmark ID 6 has no TRI observations; benchmark-relative metrics unavailable
+benchmark_coverage,103504.0,PASS,Benchmark ID 6: 1236 TRI rows
+alignment,103504.0,PASS,Alignment=98.79%
 nav_gap,103504.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,103504.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,105758.0,PASS,"First=2021-11-01, last=2026-10-30"
@@ -52,7 +54,8 @@ alignment,105758.0,PASS,Alignment=99.59%
 nav_gap,105758.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,105758.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,106235.0,PASS,"First=2021-11-01, last=2026-10-30"
-benchmark_coverage,106235.0,WARN,Benchmark ID 6 has no TRI observations; benchmark-relative metrics unavailable
+benchmark_coverage,106235.0,PASS,Benchmark ID 6: 1236 TRI rows
+alignment,106235.0,PASS,Alignment=99.51%
 nav_gap,106235.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,106235.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,108466.0,PASS,"First=2021-11-01, last=2026-10-30"
@@ -71,7 +74,8 @@ alignment,113296.0,PASS,Alignment=99.76%
 nav_gap,113296.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,113296.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,118632.0,PASS,"First=2021-11-01, last=2026-10-30"
-benchmark_coverage,118632.0,WARN,Benchmark ID 6 has no TRI observations; benchmark-relative metrics unavailable
+benchmark_coverage,118632.0,PASS,Benchmark ID 6: 1236 TRI rows
+alignment,118632.0,PASS,Alignment=99.51%
 nav_gap,118632.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,118632.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,118668.0,PASS,"First=2021-11-01, last=2026-10-30"
@@ -105,7 +109,8 @@ alignment,119063.0,PASS,Alignment=99.76%
 nav_gap,119063.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,119063.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,119598.0,PASS,"First=2021-11-01, last=2026-10-30"
-benchmark_coverage,119598.0,WARN,Benchmark ID 6 has no TRI observations; benchmark-relative metrics unavailable
+benchmark_coverage,119598.0,PASS,Benchmark ID 6: 1236 TRI rows
+alignment,119598.0,PASS,Alignment=98.79%
 nav_gap,119598.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,119598.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,119716.0,PASS,"First=2021-11-01, last=2026-10-30"
@@ -114,7 +119,8 @@ alignment,119716.0,PASS,Alignment=98.87%
 nav_gap,119716.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,119716.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,119718.0,PASS,"First=2021-11-01, last=2026-10-30"
-benchmark_coverage,119718.0,WARN,Benchmark ID 7 has no TRI observations; benchmark-relative metrics unavailable
+benchmark_coverage,119718.0,PASS,Benchmark ID 7: 1236 TRI rows
+alignment,119718.0,PASS,Alignment=98.79%
 nav_gap,119718.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,119718.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,120381.0,PASS,"First=2021-11-01, last=2026-10-30"
@@ -143,11 +149,13 @@ alignment,148978.0,PASS,Alignment=99.76%
 nav_gap,148978.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,148978.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,148989.0,PASS,"First=2021-11-01, last=2026-10-30"
-benchmark_coverage,148989.0,WARN,Benchmark ID 7 has no TRI observations; benchmark-relative metrics unavailable
+benchmark_coverage,148989.0,PASS,Benchmark ID 7: 1236 TRI rows
+alignment,148989.0,PASS,Alignment=99.51%
 nav_gap,148989.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,148989.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,148990.0,PASS,"First=2021-11-01, last=2026-10-30"
-benchmark_coverage,148990.0,WARN,Benchmark ID 7 has no TRI observations; benchmark-relative metrics unavailable
+benchmark_coverage,148990.0,PASS,Benchmark ID 7: 1236 TRI rows
+alignment,148990.0,PASS,Alignment=99.51%
 nav_gap,148990.0,PASS,Maximum calendar-day gap: 5
 nav_daily_jump,148990.0,PASS,Daily NAV changes above 10%: 0
 nav_coverage,149089.0,PASS,"First=2021-11-01, last=2026-10-30"

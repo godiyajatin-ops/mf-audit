@@ -1,0 +1,25 @@
+{
+  "series_basis":"estimated_hybrid",
+  "provisional":true,
+  "method":"BSE price index multiplied by matching NIFTY TRI\/NIFTY price wedge normalized to the first common observation.",
+  "research_window":{
+    "start":"2021-10-30",
+    "end":"2026-10-30"
+  },
+  "observations":{
+    "6":1236,
+    "7":1236
+  },
+  "source_files":{
+    "prices":[
+      "BSE_100_PRICE.csv",
+      "BSE_500_PRICE.csv",
+      "NIFTY_100_PRICE.csv",
+      "NIFTY_500_PRICE.csv"
+    ],
+    "tri_prefixes":[
+      "NIFTY 100_Historical_TR_",
+      "NIFTY 500_Historical_TR_"
+    ]
+  }
+}

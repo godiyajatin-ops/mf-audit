@@ -17,14 +17,14 @@
       "notes": "Stage A2 completed. A2.1-A2.9 acceptance checks passed: 96 SQL metrics rows, 96 SQL/Pandas parity comparisons with zero failures, 5/5 known-series tests, 12/12 factsheet comparisons, deterministic exports, and no sanity-threshold flags across 32 schemes. Eight schemes remain without benchmark-relative metrics because historical BSE 100 TRI and BSE 500 TRI were unavailable. No benchmark substitution was made. The risk-free rate remains a constant 6% annual assumption. The inherited A1 pytest test-collection issue remains unresolved and is retained in human_pending."
     },
     "A3": {
-      "status": "TODO",
-      "updated": null,
-      "notes": ""
+      "status": "COMPLETE_WITH_LIMITATIONS",
+      "updated": "2026-11-14",
+      "notes": "Preregistered A3 analyses completed. 32-scheme CAPM, primary 12-fund Direct BH-FDR, persistence, 16-pair TER fee-gap, mandate rules, passive controls, monthly/NIFTY 500/5%/7% RF/leave-extremes sensitivities, and 20-day block bootstrap are reported in reports/stage_A3_report.md. Data quality recheck: 170 PASS, 0 WARN, 0 FAIL. R2 flags for HDFC Large Cap (max drawdown), Nippon India Flexi Cap (beta), and SBI MIDCAP (beta) were reviewed against September 2026 factsheets and contextualized with no mandate mismatch evidenced; flags remain in the audit output. R3 flags ICICI Prudential Flexi Cap pair 6 (0.372 pp residual vs 0.300 pp threshold); its factsheet distinguishes current BER from TER, but no five-year TER history is available to establish the cause. Results use approved estimated hybrid BSE benchmarks for eight records and 30-Sep-2026 point-in-time TER; all outputs remain provisional."
     },
     "A4": {
-      "status": "TODO",
-      "updated": null,
-      "notes": ""
+      "status": "PASS",
+      "updated": "2026-11-16",
+      "notes": "Stage A4 dashboard completed and human-verified. Final PBIX saved at dashboard/MF_Audit_Dashboard.pbix. Four pages reviewed: Method & Limitations, Scorecard, Risk & Rolling, and Cost Audit. Four page screenshots saved under dashboard/dashboard_imgs/ at approximately 1292x727 resolution; the original 1920x1080 screenshot specification was accepted as a documented deviation without upscaling. The dark institutional theme was also accepted as a design deviation. Data pack contains 11 CSVs; dashboard validator PASS with 0 warnings; six dashboard contract tests pass; full project suite passes 11 tests; A4 report records five-value cross-check at 5/5 exact matches. A3 analysis and results were not modified by A4."
     },
     "B1": {
       "status": "TODO",
@@ -42,29 +42,30 @@
       "notes": ""
     }
   },
- "decisions": {
-  "prereg_approved": true,
-  "prereg_approved_at": "2026-11-02T22:23:06Z",
-  "survivorship_note": "UNCLEAR: Five-code survivorship probe was inconclusive. Historical codes absent from the current master were identified, but historical retrieval and closure/merger status were not conclusively established.",
-  "rf_source": "constant_assumption",
-  "bse_tri_unavailable": true,
-  "bse_series_basis": "estimated_hybrid",
-  "bse_sensitivity": "proxy_nifty",
-  "bse_decision_recorded_at": "2026-11-13T17:32:00+05:30",
-  "bse_methodological_deviation": true,
-  "bse_deviation_note": "The preregistered BSE 100 TRI and BSE 500 TRI series were unavailable. A provisional estimated hybrid series using BSE price returns and the matching NIFTY TRI/price dividend wedge will be used as the primary provisional series. Matching NIFTY TRI will be used for sensitivity analysis. Original benchmark identities and scheme mappings remain unchanged. This is a documented methodological deviation, not an unchanged confirmatory implementation of the original benchmark specification.",
-  "bse_source_priority": [
-    "real_bse_tri",
-    "estimated_hybrid",
-    "proxy_nifty"
-  ],
-  "bse_swap_rule": "When actual BSE TRI becomes available, use it as primary, rerun affected analyses, and report estimated-versus-actual tracking differences.",
-  "benchmark_confirmation_waived": true,
-  "crosscheck_waived": false,
-  "dashboard_path": null,
-  "llm_mode": null
-},
+  "decisions": {
+    "prereg_approved": true,
+    "prereg_approved_at": "2026-11-02T22:23:06Z",
+    "survivorship_note": "UNCLEAR: Five-code survivorship probe was inconclusive. Historical codes absent from the current master were identified, but historical retrieval and closure/merger status were not conclusively established.",
+    "rf_source": "constant_assumption",
+    "bse_tri_unavailable": true,
+    "bse_series_basis": "estimated_hybrid",
+    "bse_sensitivity": "proxy_nifty",
+    "bse_decision_recorded_at": "2026-11-13T17:32:00+05:30",
+    "bse_methodological_deviation": true,
+    "bse_deviation_note": "The preregistered BSE 100 TRI and BSE 500 TRI series were unavailable. A provisional estimated hybrid series using BSE price returns and the matching NIFTY TRI/price dividend wedge will be used as the primary provisional series. Matching NIFTY TRI will be used for sensitivity analysis. Original benchmark identities and scheme mappings remain unchanged. This is a documented methodological deviation, not an unchanged confirmatory implementation of the original benchmark specification.",
+    "bse_source_priority": [
+      "real_bse_tri",
+      "estimated_hybrid",
+      "proxy_nifty"
+    ],
+    "bse_swap_rule": "When actual BSE TRI becomes available, use it as primary, rerun affected analyses, and report estimated-versus-actual tracking differences.",
+    "benchmark_confirmation_waived": true,
+    "crosscheck_waived": false,
+    "dashboard_path": "dashboard/MF_Audit_Dashboard.pbix",
+    "llm_mode": null
+  },
   "human_pending": [
-    "Stage A1: resolve the incomplete pytest test collection; the prior A1 pytest invocation collected no tests. Do not treat this as resolved by the separate passing A2 tests."
+  "Stage A1: resolve the incomplete pytest test collection; the prior A1 pytest invocation collected no tests. Do not treat the separate passing A2/A4 tests as resolving this.",
+  "Stage A3: historical TER disclosures were unavailable; retain the point-in-time R3 comparison and residual as a documented limitation."
   ]
 }

@@ -1,0 +1,5 @@
+scheme_code,scheme_name,amc,pair_id,alpha_ann,ter_direct_pct,expected_alpha_ann,deviation_pp,control_band_pp,control_status,provisional
+118741,Nippon India Index Fund - Nifty 50 Plan,Nippon India Mutual Fund,14,-0.0021754651874923963,0.13,-0.0013,-0.08754651874923963,1.0,PASS,True
+119063,HDFC Nifty 50 Index Fund,HDFC Mutual Fund,13,-0.0027298439458371057,0.29,-0.0029,0.01701560541628941,1.0,PASS,True
+120684,ICICI Prudential Nifty Next 50 Index Fund,ICICI Prudential Mutual Fund,16,-0.004832927427797831,0.37,-0.0037,-0.11329274277978307,1.0,PASS,True
+148978,Kotak Nifty 50 Index Fund,Kotak Mahindra Mutual Fund,15,-0.0027115859161574067,0.1158,-0.001158,-0.15535859161574067,1.0,PASS,True

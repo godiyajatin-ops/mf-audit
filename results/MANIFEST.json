@@ -1,0 +1,118 @@
+﻿{
+    "project":  "mf-audit",
+    "stage":  "A3",
+    "status":  "COMPLETE_WITH_LIMITATIONS",
+    "research_window":  {
+                            "start":  "2021-10-30",
+                            "end":  "2026-10-30"
+                        },
+    "generated_at":  "2026-11-14T03:19:18.4970495+05:30",
+    "git_commit":  "70867a1be328e0fde1d006b9e58deb2dde537008",
+    "outputs":  [
+                    {
+                        "size_bytes":  2583,
+                        "sha256":  "CAEB390F38C226311DA36EAFABCD097AEC2F2AE48A7D7DAB862918B93128F61F",
+                        "file":  "a3_flag_review.csv"
+                    },
+                    {
+                        "size_bytes":  10856,
+                        "sha256":  "C925CFD675DC3673D102799888E5B62AC61015E9BB63D4E0FBC7CA0141771076",
+                        "file":  "alpha.csv"
+                    },
+                    {
+                        "size_bytes":  171635,
+                        "sha256":  "633A00537480B4B146EA74BFFD13089E5BC710AF3103FB849E6A3FBB7A7CCBF7",
+                        "file":  "alpha_forest.png"
+                    },
+                    {
+                        "size_bytes":  565,
+                        "sha256":  "247BDB43DC0624D3068DB181CE6C9A8643AE404AA1C2EE69E21A1715BD9078EC",
+                        "file":  "bse_hybrid_manifest.json"
+                    },
+                    {
+                        "size_bytes":  698,
+                        "sha256":  "6705C7AF98B83C08DC3D5A0F9A1BC0B4467B407BEF35115443E4FF96A460F99C",
+                        "file":  "control_check.csv"
+                    },
+                    {
+                        "size_bytes":  3992,
+                        "sha256":  "A320467E3DEC91A61C9EE314830DB87AE7F2FE1CEF3C2399F1C1B6C0C0CC950A",
+                        "file":  "coverage.csv"
+                    },
+                    {
+                        "size_bytes":  9616,
+                        "sha256":  "9A45E93024F6A48EAB8DFC371A47C2C967C0BA9D5CF4D2F578CFAC1889BC0526",
+                        "file":  "dq_report.csv"
+                    },
+                    {
+                        "size_bytes":  144,
+                        "sha256":  "4DC72114EC14E34AA5451B70564BB3A93C78C4B5E919B9640F0C033B8AF05679",
+                        "file":  "dq_report.md"
+                    },
+                    {
+                        "size_bytes":  1662,
+                        "sha256":  "C246E1ED8BC8DFAA299BCBD38F3450B994676E6AFD0B475135EB54BDC9FA750A",
+                        "file":  "factsheet_crosscheck.csv"
+                    },
+                    {
+                        "size_bytes":  4920,
+                        "sha256":  "4ECEE1D899508A17FC964C5CC2E459C33E44CC40BAC940709EF56B8C0EAD82AD",
+                        "file":  "fee_gap.csv"
+                    },
+                    {
+                        "size_bytes":  119363,
+                        "sha256":  "9DDE5EEE32E4573A416ED85C9BF188285A5A858F2FE44F9A98B616FBB4BE242F",
+                        "file":  "fee_gap.png"
+                    },
+                    {
+                        "size_bytes":  9258,
+                        "sha256":  "9BD2CB586A861DBCE2570A12BF2C3067FE3E9149E6191D56699D539C1CB4FA1F",
+                        "file":  "mandate_audit.csv"
+                    },
+                    {
+                        "size_bytes":  6966,
+                        "sha256":  "E21202A1BE9BF648D3F7F7968BD3F06DB95444ABB136A9AF7A7F120EC9B46D9B",
+                        "file":  "metrics.csv"
+                    },
+                    {
+                        "size_bytes":  20896,
+                        "sha256":  "653BF1EA050F05095101F9284BA54A1D7D05174267C001D1D073EE082E0CFFE4",
+                        "file":  "metrics_by_window.csv"
+                    },
+                    {
+                        "size_bytes":  17766,
+                        "sha256":  "4272AC4E272E6CAC86B82A41C0366E5F1534241D3858B75D4ED607E6D3DD0AC3",
+                        "file":  "metrics_pandas.csv"
+                    },
+                    {
+                        "size_bytes":  39,
+                        "sha256":  "A9F81561D53DAA68E5C4875D66D891D350EF64B2848C7911B573DEF6D258BC15",
+                        "file":  "metrics_parity_failures.csv"
+                    },
+                    {
+                        "size_bytes":  2191,
+                        "sha256":  "F80FD4E4E2AC41F7863DFAD8ADFB1360F7391F36259F86835B6C359036207D78",
+                        "file":  "persistence.csv"
+                    },
+                    {
+                        "size_bytes":  48652,
+                        "sha256":  "C0E763BC8C31EAAAC4E5F67B071C035F35831F961AF3A8883767B4B6854628D0",
+                        "file":  "persistence_scatter.png"
+                    },
+                    {
+                        "size_bytes":  11305,
+                        "sha256":  "60525E038F0E67D7C6C8B397BE93732F77126BB4051DEF74F6D6DEE2D3C7AA95",
+                        "file":  "robustness_summary.csv"
+                    },
+                    {
+                        "size_bytes":  167356,
+                        "sha256":  "200CE8C9D6C0DF1A96FBBBEB9A9B523FDE88452F78310BBE3428538382487F11",
+                        "file":  "rolling_beta.csv"
+                    },
+                    {
+                        "size_bytes":  193036,
+                        "sha256":  "E35DBE32EE2BE5C48C1EFE874CD311A3C02F59E30951130091B15BA08D9099DC",
+                        "file":  "rolling_beta.png"
+                    }
+                ]
+}
