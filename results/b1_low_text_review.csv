@@ -1,0 +1,390 @@
+doc_id,local_path,page,char_count,method,classification,review_note,text
+1,data/raw_docs/probe/all-sbimf-schemes-factsheet-august-2026.pdf,1,99,low_text_exception,cover_or_graphic_page,Short extracted cover content,"Factsheet as on
+August 31, 2026
+9
+Download InvesTap Nxt to experience a new way of Inves(cid:415)ng"
+1,data/raw_docs/probe/all-sbimf-schemes-factsheet-august-2026.pdf,151,0,low_text_exception,blank_or_empty,No extracted text,
+1,data/raw_docs/probe/all-sbimf-schemes-factsheet-august-2026.pdf,152,0,low_text_exception,blank_or_empty,No extracted text,
+2,data/raw_docs/probe/all-sbimf-schemes-factsheet-september-2026.pdf,1,97,low_text_exception,cover_or_graphic_page,Short extracted cover content,"01
+September 30, 2026
+Factsheet as on
+Download InvesTap Nxt to experience a new way of InvesƟng
+9"
+2,data/raw_docs/probe/all-sbimf-schemes-factsheet-september-2026.pdf,146,0,low_text_exception,blank_or_empty,No extracted text,
+2,data/raw_docs/probe/all-sbimf-schemes-factsheet-september-2026.pdf,147,0,low_text_exception,blank_or_empty,No extracted text,
+4,data/raw_docs/probe/ICICI MF Factsheet - September 2026.pdf,1,1,low_text_exception,cover_or_page_number,Very little extracted text; visual confirmation recommended,1
+4,data/raw_docs/probe/ICICI MF Factsheet - September 2026.pdf,180,3,low_text_exception,cover_or_page_number,Very little extracted text; visual confirmation recommended,180
+6,data/raw_docs/probe/ICICI Prudential MidCap Fund.pdf,10,43,low_text_exception,intentional_blank,Explicitly marked as intentionally blank,THIS PAGE HAS BEEN LEFT INTENTIONALLY BLANK
+6,data/raw_docs/probe/ICICI Prudential MidCap Fund.pdf,31,43,low_text_exception,intentional_blank,Explicitly marked as intentionally blank,THIS PAGE HAS BEEN LEFT INTENTIONALLY BLANK
+6,data/raw_docs/probe/ICICI Prudential MidCap Fund.pdf,35,43,low_text_exception,intentional_blank,Explicitly marked as intentionally blank,THIS PAGE HAS BEEN LEFT INTENTIONALLY BLANK
+6,data/raw_docs/probe/ICICI Prudential MidCap Fund.pdf,36,112,low_text_exception,short_disclaimer,Disclaimer page,"September 2026
+Mutual Fund investments are subject to market risks, read all scheme related documents carefully."
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,1,0,low_text_exception,empty_extraction,Empty extracted page; inspect visually if needed,
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,32,154,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Flexi Cap Fund
+Date as on August 31, 2026
+32
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,50,157,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Japan Equity Fund
+Date as on August 31, 2026
+50
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,53,168,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India US Equity Opportunities Fund
+Date as on August 31, 2026
+53
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,56,158,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Taiwan Equity Fund
+Date as on August 31, 2026
+56
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,59,155,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Innovation Fund
+Date as on August 31, 2026
+59
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,62,160,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Active Momentum Fund
+Date as on August 31, 2026
+62
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,65,148,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India MNC Fund
+Date as on August 31, 2026
+65
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,107,158,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Dynamic Term Fund
+Date as on August 31, 2026
+107
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,131,167,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Index Fund - Nifty 50 Plan
+Date as on August 31, 2026
+131
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,134,169,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Index Fund - BSE Sensex Plan
+Date as on August 31, 2026
+134
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,137,170,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty Smallcap 250 Index Fund
+Date as on August 31, 2026
+137
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,140,168,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty Midcap 150 Index Fund
+Date as on August 31, 2026
+140
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,143,169,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty 50 Value 20 Index Fund
+Date as on August 31, 2026
+143
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,146,181,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty Alpha Low Volatility 30 Index Fund
+Date as on August 31, 2026
+146
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,149,162,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty Bank Index Fund
+Date as on August 31, 2026
+149
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,152,160,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty IT Index Fund
+Date as on August 31, 2026
+152
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,155,174,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty 500 Equal Weight Index Fund
+Date as on August 31, 2026
+155
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,158,173,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty 500 Momentum 50 Index Fund
+Date as on August 31, 2026
+158
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,161,162,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty Auto Index Fund
+Date as on August 31, 2026
+161
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,164,164,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty Realty Index Fund
+Date as on August 31, 2026
+164
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,167,179,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty 500 Low Volatility 50 Index Fund
+Date as on August 31, 2026
+167
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,170,172,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty 500 Quality 50 Index Fund
+Date as on August 31, 2026
+170
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,173,170,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India BSE Sensex Next 30 Index Fund
+Date as on August 31, 2026
+173
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,176,177,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty India Manufacturing Index Fund
+Date as on August 31, 2026
+176
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,185,198,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty SDL Plus G-Sec - Jun 2028 Maturity 70:30 Index Fund
+Date as on August 31, 2026
+185
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,188,181,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty G-Sec Sep 2027 Maturity Index Fund
+Date as on August 31, 2026
+188
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,191,181,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty G-Sec Jun 2036 Maturity Index Fund
+Date as on August 31, 2026
+191
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,194,198,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty SDL Plus G-Sec - Jun 2029 Maturity 70:30 Index Fund
+Date as on August 31, 2026
+194
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,197,181,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty G-Sec Oct 2028 Maturity Index Fund
+Date as on August 31, 2026
+197
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,200,196,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India CRISIL-IBX AAA Financial Services - Dec 2026 Index Fund
+Date as on August 31, 2026
+200
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,203,196,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India CRISIL-IBX AAA Financial Services - Jan 2028 Index Fund
+Date as on August 31, 2026
+203
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,206,197,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India CRISIL-IBX Financial Services 3-6 Months Debt Index Fund
+Date as on August 31, 2026
+206
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,209,198,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India CRISIL-IBX Financial Services 9-12 Months Debt Index Fund
+Date as on August 31, 2026
+209
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,212,158,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty 50 BeES
+Date as on August 31, 2026
+212
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,215,155,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF BSE Sensex
+Date as on August 31, 2026
+215
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,218,162,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty 50 Value 20
+Date as on August 31, 2026
+218
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,221,170,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty Next 50 Junior BeES
+Date as on August 31, 2026
+221
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,224,154,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty 100
+Date as on August 31, 2026
+224
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,227,168,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty India Consumption
+Date as on August 31, 2026
+227
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,230,176,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty Dividend Opportunities 50
+Date as on August 31, 2026
+230
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,233,170,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty Infrastructure BeES
+Date as on August 31, 2026
+233
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,236,160,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty Bank BeES
+Date as on August 31, 2026
+236
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,239,164,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty PSU Bank BeES
+Date as on August 31, 2026
+239
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,242,166,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty 50 Shariah BeES
+Date as on August 31, 2026
+242
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,245,161,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty Midcap 150
+Date as on August 31, 2026
+245
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,248,159,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Hang Seng BeES
+Date as on August 31, 2026
+248
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,251,163,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF BSE Sensex Next 50
+Date as on August 31, 2026
+251
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,254,153,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty IT
+Date as on August 31, 2026
+254
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,257,157,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty Pharma ETF
+Date as on August 31, 2026
+257
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,260,155,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty Auto ETF
+Date as on August 31, 2026
+260
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,263,136,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+CPSE ETF
+Date as on August 31, 2026
+263
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,266,163,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India BSE Sensex Next 30 ETF
+Date as on August 31, 2026
+266
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,269,170,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty India Manufacturing ETF
+Date as on August 31, 2026
+269
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,272,170,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty 1D Rate Liquid BeES
+Date as on August 31, 2026
+272
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,275,174,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty 1D Rate Liquid ETF - Growth
+Date as on August 31, 2026
+275
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,278,179,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty 8-13 yr G-Sec Long Term Gilt
+Date as on August 31, 2026
+278
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,281,171,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Nifty 5 yr Benchmark G-Sec
+Date as on August 31, 2026
+281
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,284,151,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Silver ETF
+Date as on August 31, 2026
+284
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,287,154,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India ETF Gold BeES
+Date as on August 31, 2026
+287
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,290,158,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Gold Savings Fund
+Date as on August 31, 2026
+290
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,293,170,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Nifty Next 50 Junior BeES FoF
+Date as on August 31, 2026
+293
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,296,180,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Diversified Equity Flexicap Passive FoF
+Date as on August 31, 2026
+296
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,299,163,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Multi - Asset Omni FoF
+Date as on August 31, 2026
+299
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,302,182,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Income Plus Arbitrage Active Fund of Fund
+Date as on August 31, 2026
+302
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,305,170,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Silver ETF Fund of Fund (FOF)
+Date as on August 31, 2026
+305
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,308,183,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Retirement Fund - Income Generation Scheme
+Date as on August 31, 2026
+308
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,311,179,low_text_exception,short_additional_disclosure,AMC disclosure page; retain as source content,"Additional Disclosure by AMC
+Nippon India Retirement Fund - Wealth Creation Plan
+Date as on August 31, 2026
+311
+Past Performance is not an indicator or guarantee of future results"
+13,data/raw_docs/probe/Nippon-FS-September-2026.pdf,372,0,low_text_exception,empty_extraction,Empty extracted page; inspect visually if needed,
+14,data/raw_docs/probe/Nippon-India-Flexicap-Fund-SID.pdf,86,63,low_text_exception,intentional_blank,Reversed text identifies intentionally blank page,"K
+N
+A
+L
+B
+T
+P
+E
+K
+Y
+L
+L
+A
+N
+O
+I
+T
+N
+E
+T
+N
+I
+S
+I
+E
+G
+A
+P
+S
+I
+H
+T"
