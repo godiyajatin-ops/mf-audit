@@ -45,7 +45,7 @@ rag:
   fusion_k: 60
   min_score: 0.028012
   frozen_at: "2026-11-19T02:13:50.1468344+05:30"
-  frozen_commit: null
+  frozen_commit: "d0fb39cf42555946a04aff90cf30bf388ba8fa1d"
 
 seed: 42
 
