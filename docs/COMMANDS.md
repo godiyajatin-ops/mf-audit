@@ -69,6 +69,35 @@ Review:
 
 The screenshots are retained at their native resolution rather than upscaled to 1920 x 1080. This is a documented and accepted deviation.
 
+## Stage B2 - SQL and evaluation
+
+Run the offline B2 checks:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest tests\test_b2_units.py -q
+```
+
+Run the PostgreSQL checks using the configured read-only role:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest tests\test_entities.py tests\test_b2_sql_integration.py -q
+```
+
+`eval/gold_questions.csv` is a machine-drafted candidate set. A human must review every row before the evaluation runner will proceed. After review, mark each row's `notes` with the `HUMAN_APPROVED:` prefix and set `eval/split.json` status to `human_reviewed`. Then run the development ablation:
+
+```powershell
+.\.venv\Scripts\python.exe -m eval.run_eval --split dev --ablation
+```
+
+Do not run held-out evaluation until development tuning is complete and `config.yaml` contains the frozen `rag.min_score`, `rag.frozen_at`, and `rag.frozen_commit` values. Also set `heldout_run_permitted` in `eval/split.json` only after human review. The runner blocks held-out execution until all gates are satisfied.
+
+For B2 generation, check provider availability using only a synthetic prompt first. The dev runner requires a successful synthetic preflight for the configured model within 24 hours. The preflight itself is bounded to one 30-second HTTP attempt; the SDK default of five hidden attempts is disabled. It uses the read-only database role, the dev split, and adds the six approved O01-O06 smoke questions only to the faithfulness sample; they do not modify the gold CSV or split. Held-out additionally requires the frozen config, explicit permission, and 20 completed faithfulness labels.
+
+```powershell
+.\.venv\Scripts\python.exe -m eval.run_generation_eval --preflight
+.\.venv\Scripts\python.exe -m eval.run_generation_eval --split dev
+```
+
 ## Project status and outstanding work
 
 See `PROJECT_STATE.json` and `reports/HUMAN_TODO.md` for authoritative status.

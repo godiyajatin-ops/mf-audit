@@ -40,8 +40,20 @@ audit:
   passive_te_max: 0.01
 
 rag:
-  chunking: section
+  chunking: fixed
   top_k: 5
   fusion_k: 60
+  min_score: 0.028012
+  frozen_at: "2026-11-19T02:13:50.1468344+05:30"
+  frozen_commit: null
 
 seed: 42
+
+llm:
+  provider: gemini
+  model: gemini-3.1-flash-lite
+  temperature: 0.0
+  max_tokens: 400
+  timeout_seconds: 300
+  max_retries: 3
+  cache_enabled: true

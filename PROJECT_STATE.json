@@ -27,14 +27,14 @@
       "notes": "Stage A4 dashboard completed and human-verified. Final PBIX saved at dashboard/MF_Audit_Dashboard.pbix. Four pages reviewed: Method & Limitations, Scorecard, Risk & Rolling, and Cost Audit. Four page screenshots saved under dashboard/dashboard_imgs/ at approximately 1292x727 resolution; the original 1920x1080 screenshot specification was accepted as a documented deviation without upscaling. The dark institutional theme was also accepted as a design deviation. Data pack contains 11 CSVs; dashboard validator PASS with 0 warnings; six dashboard contract tests pass; full project suite passes 11 tests; A4 report records five-value cross-check at 5/5 exact matches. A3 analysis and results were not modified by A4."
     },
     "B1": {
-      "status": "TODO",
-      "updated": null,
-      "notes": ""
+      "status": "PASS",
+      "updated": "2026-11-19",
+      "notes": "Stage B1 completed and committed. Commit: b21bd74 Complete Stage B1 document retrieval pipeline."
     },
     "B2": {
-      "status": "TODO",
-      "updated": null,
-      "notes": ""
+      "status": "PARTIAL",
+      "updated": "2026-11-19",
+      "notes": "B2 SQL, entity, routing, and mixed RAG/database integration implemented; PostgreSQL read-only checks passed. All 35 gold questions are human-approved with seeded 25-dev/10-heldout split; heldout permission remains false. Dev retrieval ablation selected strategy A + hybrid (MRR 0.429), with provisional min_score=0.028012; config is not frozen. Gemini 3.1 Flash-Lite passed synthetic preflight and was used for 21 provider-backed dev prompts after user authorization. Dev generation contains 25 official dev questions plus six smoke supplements, with zero runner errors. Official dev metrics: intent accuracy 1.000, refusal accuracy 1.000, false-refusal rate 0.000, DOC/MIX Hit@3 0.357, Hit@5 0.500, MRR 0.393, exact gold-page citation rate 0.500 (7/14), numeric exactness 1.000 (7/7 within 1e-6). Twenty human faithfulness labels are complete and all are 1: 14 dev DOC/MIX plus six approved smoke supplements. Numeric export omission was corrected by recovering the top-level value from saved SQL rows; two regression tests were added. Latest full test suite: 61 passed. Mandate-audit acceptance grain is 16 scheme-level records; 32 Direct/Regular plan-level records are supporting detail only. Remaining qualifications include D09 source discrepancy, missing row-level SQL traces in MIX review rows, and M08 composite PRI/TRI history. No heldout evaluation has been run."
     },
     "C": {
       "status": "TODO",
@@ -62,10 +62,13 @@
     "benchmark_confirmation_waived": true,
     "crosscheck_waived": false,
     "dashboard_path": "dashboard/MF_Audit_Dashboard.pbix",
-    "llm_mode": null
+    "llm_mode": "gemini_3_1_flash_lite_dev_evaluated",
+    "mandate_audit_acceptance_grain": "scheme_level_16",
+    "mandate_audit_acceptance_note": "The 16 scheme-level rows in results/mandate_audit.csv satisfy B2 acceptance. The 32 Direct/Regular rows in results/mandate_audit_plan_detail.csv are supporting scheme-plan detail and are not counted as 32 distinct funds."
   },
   "human_pending": [
-  "Stage A1: resolve the incomplete pytest test collection; the prior A1 pytest invocation collected no tests. Do not treat the separate passing A2/A4 tests as resolving this.",
-  "Stage A3: historical TER disclosures were unavailable; retain the point-in-time R3 comparison and residual as a documented limitation."
+    "Stage A1: resolve the incomplete pytest test collection; the prior A1 pytest invocation collected no tests. Do not treat the separate passing A2/A4 tests as resolving this.",
+    "Stage A3: historical TER disclosures were unavailable; retain the point-in-time R3 comparison and residual as a documented limitation.",
+    "Stage B2: complete dev configuration decisions and commit the final config freeze before any heldout evaluation; heldout permission remains false."
   ]
 }

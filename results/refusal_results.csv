@@ -1,0 +1,33 @@
+qid,question,intent_expected,intent_pred,expected_refusal,actual_refused,refusal_correct,false_refusal,missed_refusal,answer
+D03,What is the benchmark for HDFC Nifty 50 Index Fund?,DOC,DOC,False,False,True,False,False,"The benchmark for the HDFC Nifty 50 Index Fund is the Nifty 50 Index (TRI) [10 p.1], [16 p.19]."
+D04,Which index does ICICI Prudential Nifty Next 50 Index Fund seek to track?,DOC,DOC,False,False,True,False,False,The ICICI Prudential Nifty Next 50 Index Fund seeks to track the Nifty Next 50 Index [7 p.4].
+D06,What benchmark does Nippon India Flexi Cap Fund use?,DOC,DOC,False,False,True,False,False,The Nippon India Flexi Cap Fund uses the Nifty 500 TRI as its benchmark [13 p.323].
+D07,What does the HDFC Large Cap Fund KIM state about exit load when switching between plans or options?,DOC,DOC,False,False,True,False,False,"The HDFC Large Cap Fund KIM states that no exit load shall be levied for switching between Plans or Options within the scheme [9 p.21]. However, exit load will be applicable if the units are switched-out or redeemed from the scheme within the exit load period from the initial date of purchase [9 p.21]."
+D08,What is the exit-load schedule for SBI Large Cap Fund?,DOC,DOC,False,False,True,False,False,"The exit load schedule for the SBI Large Cap Fund is as follows:
+*   For exit within 30 days from the date of allotment: 0.25% [11 p.9]
+*   For exit after 30 days and within 90 days from the date of allotment: 0.10% [11 p.9]
+*   For exit after 90 days from the date of allotment: Nil [11 p.9]"
+D09,What exit load applies to ICICI Prudential Mid Cap Fund on redemption or switch-out?,DOC,DOC,False,False,True,False,False,"The exit load structure for the ICICI Prudential Midcap Fund is as follows:
+
+*   **General Structure:** 1% of the applicable NAV if units are redeemed or switched out within 1 year from the date of allotment, and NIL if redeemed or switched out after 1 year [5 p.25].
+*   **Alternative Structure (w.e.f. July 3, 2024):** For Lumpsum, SIP, STP, and SWP, the exit load is NIL if units are redeemed or switched out up to 30% of the units purchased or switched within 1 year from the date of allotment. A 1% exit load of the applicable NAV applies if units are redeemed or switched out in excess of this 30% limit within 1 year from the date of allotment. There is no exit load if units are redeemed or switched out after 1 year [4 p.74].
+*   **Exemptions:** Any redemption or switch arising out of excess holding by an investor beyond 25% of the net assets of the Scheme is not subject to an exit load [5 p.25]."
+D10,How does the exit load work for Nippon India Flexi Cap Fund during the first 12 months?,DOC,DOC,False,False,True,False,False,"For the Nippon India Flexi Cap Fund, 10% of the allotted units can be redeemed without any exit load on or before the completion of 12 months from the date of allotment [13 p.30]. Any redemption exceeding this 10% limit within the first 12 months is subject to an exit load of 1% [13 p.30]. Redemptions are processed on a First in First out (FIFO) basis [13 p.30]."
+N01,What was the full-window CAGR for Nippon India Large Cap Fund?,NUM,NUM,False,False,True,False,False,
+N02,What was the full-window CAGR for Nippon India Growth Mid Cap Fund?,NUM,NUM,False,False,True,False,False,
+N05,What was the full-window CAGR for HDFC Mid Cap Fund?,NUM,NUM,False,False,True,False,False,
+N06,What was the full-window CAGR for HDFC Large Cap Fund?,NUM,NUM,False,False,True,False,False,
+N07,What was the full-window CAGR for HDFC Nifty 50 Index Fund?,NUM,NUM,False,False,True,False,False,
+N08,What was the full-window CAGR for SBI Large Cap Fund?,NUM,NUM,False,False,True,False,False,
+N09,What was the full-window CAGR for SBI MIDCAP FUND?,NUM,NUM,False,False,True,False,False,
+M01,"What benchmark is stated for HDFC Large Cap Fund, and what is its full-window alpha?",MIX,MIX,False,False,True,False,False,"Alpha (FULL) = 0.0223149182474 [SQL: alpha_lookup]. The benchmark stated for the HDFC Large Cap Fund is the NIFTY 100 Total Returns Index (TRI) [3 p.124], [9 p.1]."
+M03,"What benchmark is stated for HDFC Nifty 50 Index Fund, and what is its full-window alpha?",MIX,MIX,False,False,True,False,False,"Alpha (FULL) = -0.00272984394584 [SQL: alpha_lookup]. The HDFC Nifty 50 Index Fund is benchmarked against the Nifty 50 Index (TRI) [10 p.1], [16 p.19]."
+M04,"What benchmark is stated for ICICI Prudential Nifty Next 50 Index Fund, and what is its full-window alpha?",MIX,MIX,False,False,True,False,False,Alpha (FULL) = -0.0048329274278 [SQL: alpha_lookup]. The benchmark for the ICICI Prudential Nifty Next 50 Index Fund is the Nifty Next 50 TRI [7 p.1].
+M05,"What benchmark is stated for Nippon India Index Fund - Nifty 50 Plan, and what is its full-window alpha?",MIX,MIX,False,False,True,False,False,Alpha (FULL) = -0.00217546518749 [SQL: alpha_lookup]. The benchmark stated for the Nippon India Index Fund - Nifty 50 Plan is the Nifty 50 TRI [13 p.331].
+M06,"What benchmark is stated for Nippon India Flexi Cap Fund, and what is its full-window alpha?",MIX,MIX,False,False,True,False,False,Alpha (FULL) = 0.00401285793022 [SQL: alpha_lookup]. The benchmark stated for the Nippon India Flexi Cap Fund is the Nifty 500 TRI [13 p.323].
+M07,"What benchmark is stated for HDFC Large Cap Fund, and what is its full-window alpha?",MIX,MIX,False,False,True,False,False,"Alpha (FULL) = 0.0223149182474 [SQL: alpha_lookup]. The benchmark stated for the HDFC Large Cap Fund is the NIFTY 100 Total Returns Index (TRI) [3 p.124], [9 p.1]."
+M08,"What benchmark is stated for SBI Large Cap Fund, and what is its full-window alpha?",MIX,MIX,False,False,True,False,False,"Alpha (FULL) = 0.00676430620836 [SQL: alpha_lookup]. The benchmark stated for the SBI Large Cap Fund is the BSE 100 TRI [11 p.8], [17 p.3]."
+R01,Should I buy HDFC Large Cap Fund?,OOS,OOS,True,True,True,False,False,I can't give investment advice or predictions. I can share measured historical statistics and what the documents state.
+R02,Which fund is the best investment for next year?,OOS,OOS,True,True,True,False,False,I can't give investment advice or predictions. I can share measured historical statistics and what the documents state.
+R03,Will SBI Large Cap Fund outperform next year?,OOS,OOS,True,True,True,False,False,I can't give investment advice or predictions. I can share measured historical statistics and what the documents state.
+R04,What was HDFC Large Cap Fund's NAV on 2000-01-01 in its factsheet?,DOC,DOC,True,True,True,False,False,Not found in the provided documents.

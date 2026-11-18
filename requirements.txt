@@ -21,3 +21,4 @@ rapidfuzz
 tqdm
 ruff
 openpyxl
+google-genai

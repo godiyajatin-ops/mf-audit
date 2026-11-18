@@ -2,7 +2,6 @@
 import argparse
 import pickle
 
-import faiss
 import numpy as np
 import pandas as pd
 from sentence_transformers import SentenceTransformer
@@ -102,6 +101,8 @@ def load_bm25(strategy):
 
 
 def load_dense(strategy):
+    # Keep BM25-only use and import-time tests independent of the optional FAISS DLL.
+    import faiss
     index_path = INDEX_DIR / f"faiss{strategy}.index"
     mapping_path = INDEX_DIR / f"dense{strategy}_ids.parquet"
 
@@ -160,6 +161,7 @@ def retrieve(
     mode="hybrid",
     top_k=5,
     scheme_code=None,
+    fusion_k=RRF_K,
 ):
     if not query or not query.strip():
         raise ValueError("Query cannot be empty")
@@ -222,7 +224,7 @@ def retrieve(
                 [chunk_id for chunk_id, _ in bm25_results],
                 [chunk_id for chunk_id, _ in dense_results],
             ],
-            k=RRF_K,
+            k=fusion_k,
         )
 
         final_results = [
