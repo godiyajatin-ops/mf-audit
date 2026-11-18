@@ -1,6 +1,6 @@
 ﻿# Stage B2 failure analysis
 
-**Status: DEV revision evaluated — 2026-11-18.** This analysis uses only approved dev questions and approved O01-O06 smoke supplements. No heldout result was viewed or used.
+**Status: DEV and heldout evaluation completed - 2026-11-19.** The configuration was frozen before heldout evaluation. Heldout results were not used for tuning.
 
 ## Citation-format regression and fix
 
@@ -19,7 +19,7 @@ Human-review qualifications:
 - M01, M03-M08: cited excerpts support the stated benchmarks, but individual SQL execution traces for the alpha values are not included in the review rows. Prior SQL integration checks are separate supporting evidence.
 - M08: historical benchmark performance uses a composite PRI/TRI series because full inception-period TRI data was unavailable.
 
-No heldout evaluation was run; the configuration is not frozen.
+Heldout evaluation was subsequently completed using the frozen configuration; no post-heldout tuning was performed.
 
 ## Numeric evaluation export defect and correction
 
@@ -43,3 +43,50 @@ project test suite passes 61 tests.
 
 This was an export-schema omission, not a numeric answer failure. The original
 dev numeric exactness result remains 1.000 (7/7).
+
+## Heldout evaluation (2026-11-19)
+
+The retrieval configuration was frozen before heldout evaluation:
+- Frozen timestamp: `2026-11-19T02:13:50.1468344+05:30`
+- Freeze commit: `d0fb39cf42555946a04aff90cf30bf388ba8fa1d`
+- Split: seed 42, 25 dev questions and 10 heldout questions
+- No configuration tuning was performed after heldout evaluation.
+
+### Retrieval ablation
+
+| Split | Strategy | Mode | Hit@3 | Hit@5 | MRR |
+|---|---|---|---:|---:|---:|
+| Dev | A | BM25 | 0.286 | 0.429 | 0.286 |
+| Dev | A | Dense | 0.357 | 0.500 | 0.310 |
+| Dev | A | Hybrid | 0.429 | 0.571 | 0.429 |
+| Dev | B | BM25 | 0.286 | 0.429 | 0.286 |
+| Dev | B | Dense | 0.357 | 0.429 | 0.196 |
+| Dev | B | Hybrid | 0.429 | 0.571 | 0.318 |
+| Heldout | A | BM25 | 0.167 | 0.167 | 0.167 |
+| Heldout | A | Dense | 0.500 | 0.667 | 0.458 |
+| Heldout | A | Hybrid | 0.667 | 0.667 | 0.583 |
+| Heldout | B | BM25 | 0.167 | 0.167 | 0.167 |
+| Heldout | B | Dense | 0.333 | 0.333 | 0.111 |
+| Heldout | B | Hybrid | 0.667 | 0.667 | 0.389 |
+
+Strategy A + hybrid had the strongest MRR on both splits and remained the selected configuration.
+
+### Heldout generation
+
+All 10 heldout questions completed without runner errors:
+- Intent accuracy: 1.000
+- Refusal accuracy: 1.000
+- False-refusal rate: 0.000
+- DOC/MIX retrieval Hit@3: 0.500; Hit@5: 0.667; MRR: 0.542
+- Exact gold-page citation rate: 0.667
+- Numeric exactness within 1e-6: 1.000
+- Mean latency: 674.018 ms
+- OOS case R05 was correctly refused.
+
+The combined `results/eval_summary.csv` now records separate dev and heldout rows. The heldout summary was built from preserved evaluation outputs; no model rerun was needed.
+
+The 20 human faithfulness labels remain the approved sample of 14 dev DOC/MIX answers plus six smoke supplements. All 20 labels are positive. Smoke supplements are not counted as gold-set questions.
+
+### Remaining limitations
+
+The earlier dev-review limitations remain applicable: D09 source discrepancy, missing row-level SQL traces in MIX review rows, and M08 composite PRI/TRI history. Historical TER disclosure gaps and unavailable formal R5 calibration remain documented; the provisional R5 proxy heuristic is not presented as formal calibration.

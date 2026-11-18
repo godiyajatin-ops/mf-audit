@@ -1,7 +1,7 @@
 {
   "seed": 42,
   "status": "human_reviewed",
-  "heldout_run_permitted": false,
+  "heldout_run_permitted": true,
   "strata": {
     "doc": 3,
     "num": 3,
