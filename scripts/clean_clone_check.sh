@@ -20,12 +20,22 @@ git clone --no-hardlinks --branch "$BRANCH" "$SOURCE_REPO" "$CLONE_DIR"
 cd "$CLONE_DIR"
 
 echo "[2/6] Creating fresh virtual environment..."
-if [[ "${OS:-}" == "Windows_NT" || -n "${WINDIR:-}" ]]; then
+if command -v python >/dev/null 2>&1; then
     python -m venv .venv
-    VENV_PYTHON=".venv/Scripts/python.exe"
-else
+elif command -v python3 >/dev/null 2>&1; then
     python3 -m venv .venv
+else
+    echo "ERROR: Python was not found."
+    exit 1
+fi
+
+if [[ -x ".venv/Scripts/python.exe" ]]; then
+    VENV_PYTHON=".venv/Scripts/python.exe"
+elif [[ -x ".venv/bin/python" ]]; then
     VENV_PYTHON=".venv/bin/python"
+else
+    echo "ERROR: Python virtual environment was created, but its executable was not found."
+    exit 1
 fi
 
 echo "[3/6] Installing requirements.txt..."
