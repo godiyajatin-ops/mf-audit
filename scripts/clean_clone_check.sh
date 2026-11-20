@@ -20,27 +20,31 @@ git clone --no-hardlinks --branch "$BRANCH" "$SOURCE_REPO" "$CLONE_DIR"
 cd "$CLONE_DIR"
 
 echo "[2/6] Creating fresh virtual environment..."
-if command -v python >/dev/null 2>&1; then
+if [[ -n "${PYTHON_BIN:-}" ]]; then
+    "$PYTHON_BIN" -m venv .venv
+elif command -v python3.11 >/dev/null 2>&1; then
+    python3.11 -m venv .venv
+elif command -v python >/dev/null 2>&1 && python -c 'import sys; raise SystemExit(sys.version_info[:2] != (3, 11))'; then
     python -m venv .venv
-elif command -v python3 >/dev/null 2>&1; then
-    python3 -m venv .venv
 else
-    echo "ERROR: Python was not found."
+    echo "ERROR: Python 3.11 is required. Set PYTHON_BIN to its executable."
     exit 1
 fi
 
 if [[ -x ".venv/Scripts/python.exe" ]]; then
     VENV_PYTHON=".venv/Scripts/python.exe"
+elif [[ -x ".venv/bin/python.exe" ]]; then
+    VENV_PYTHON=".venv/bin/python.exe"
 elif [[ -x ".venv/bin/python" ]]; then
     VENV_PYTHON=".venv/bin/python"
 else
-    echo "ERROR: Python virtual environment was created, but its executable was not found."
+    echo "ERROR: Python virtual environment executable was not found."
     exit 1
 fi
 
-echo "[3/6] Installing requirements.txt..."
+echo "[3/6] Installing locked dependencies..."
 "$VENV_PYTHON" -m pip install --upgrade pip
-"$VENV_PYTHON" -m pip install -r requirements.txt
+"$VENV_PYTHON" -m pip install -r requirements.lock.txt
 
 echo "[4/6] Running non-DB tests..."
 if command -v make >/dev/null 2>&1; then
