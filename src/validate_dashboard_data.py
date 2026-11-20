@@ -66,13 +66,43 @@ SCHEMA = {
         "key": ["field"],
         "required": ["field", "label", "definition"],
     },
-}
 
+    "mandate_audit.csv": {
+        "grain": "One row per scheme-level mandate audit",
+        "key": ["scheme_code"],
+        "required": [
+            "scheme_code", "scheme_name", "amc", "category",
+            "representative_plan", "benchmark_name", "benchmark_confirmed",
+            "provisional", "is_passive", "r2", "beta", "max_dd",
+            "te_ann", "ter_direct_pct", "ter_regular_pct",
+            "objective_evidence_status", "objective_source_doc_id",
+            "objective_source_page", "R1_benchmark_fit", "R2_peer_risk",
+            "R3_cost_fit", "R4_passive_fit",
+            "R5_closet_indexer_screen",
+            "R5_provisional_proxy_heuristic",
+        ],
+    },
+}
 DATE_COLS = {"nav_date", "date", "start_date", "end_date", "max_dd_start", "max_dd_end"}
 NUMERIC_COLS = {
-    "pair_id", "scheme_code", "benchmark_id", "cagr", "vol_ann", "sharpe", "sortino", "max_dd", "alpha_ann", "p_bh", "gap_pp", "expected_pp", "residual_pp", "rupee_gap", "deviation_pp", "expected_alpha_ann", "rolling_return_252d", "rolling_return_3y", "benchmark_return_3y", "drawdown", "up_capture", "down_capture", "beta_252", "benchmark_level", "te_ann", "info_ratio", "tracking_error", "n_obs", "r2", "beta", "fdr_q", "control_band_pp", "ter_direct_pct", "ter_regular_pct", "nw_lag", "p_value", "se_alpha_ann", "alpha_ci_lower", "alpha_ci_upper", "minimum_gap_pp", "maximum_gap_pp", "median_gap_pp", "wilcoxon_p_value", "wilcoxon_statistic", "alignment_pct", "rolling_beta_252d"
+    "pair_id", "scheme_code", "benchmark_id", "cagr", "vol_ann",
+    "sharpe", "sortino", "max_dd", "alpha_ann", "p_bh", "gap_pp",
+    "expected_pp", "residual_pp", "rupee_gap", "deviation_pp",
+    "expected_alpha_ann", "rolling_return_252d", "rolling_return_3y",
+    "benchmark_return_3y", "drawdown", "up_capture", "down_capture",
+    "beta_252", "benchmark_level", "te_ann", "info_ratio",
+    "tracking_error", "n_obs", "r2", "beta", "fdr_q",
+    "control_band_pp", "ter_direct_pct", "ter_regular_pct", "nw_lag",
+    "p_value", "se_alpha_ann", "alpha_ci_lower", "alpha_ci_upper",
+    "minimum_gap_pp", "maximum_gap_pp", "median_gap_pp",
+    "wilcoxon_p_value", "wilcoxon_statistic", "alignment_pct",
+    "rolling_beta_252d", "se_beta", "R2_beta_z", "R2_max_dd_z",
+    "R3_abs_residual_pp", "R4_tracking_error_pct",
+    "objective_source_doc_id", "objective_source_page", "source_page",
+    "ter_direct_source_row", "ter_regular_source_row",
+    "ber_direct_pct", "ber_regular_pct"
 }
-BOOL_COLS = {"is_passive", "benchmark_confirmed", "provisional", "caveat_flag", "significant_bh"}
+BOOL_COLS = {"is_passive", "is_passive_facts", "benchmark_confirmed", "provisional", "caveat_flag", "significant_bh"}
 DESCRIPTIONS = {
     "scheme_code": "Stable scheme-plan key.", "pair_id": "Identifier shared by the Direct and Regular plans.",
     "short_name": "Unique plan-aware display name, no more than 28 characters.",
@@ -104,6 +134,21 @@ NULL_SEMANTICS = {
     ("capture.csv", "te_ann"): "Tracking error unavailable for estimated-hybrid schemes in the frozen A3 results.",
     ("rolling_returns.csv", "rolling_return_3y"): "Blank until 756 common scheme/benchmark observations exist.",
     ("rolling_returns.csv", "benchmark_return_3y"): "Blank until 756 common scheme/benchmark observations exist.",
+
+    ("mandate_audit.csv", "p_bh"): "No BH family p-value is assigned to passive schemes.",
+    ("mandate_audit.csv", "fdr_q"): "No BH family q-value is assigned to passive schemes.",
+    ("mandate_audit.csv", "R1_benchmark_fit"): "R1 is not applicable to passive schemes.",
+    ("mandate_audit.csv", "R2_peer_risk"): "R2 is not applicable to passive schemes.",
+    ("mandate_audit.csv", "R2_beta_z"): "R2 beta z-score is not calculated for passive schemes.",
+    ("mandate_audit.csv", "R2_max_dd_z"): "R2 drawdown z-score is not calculated for passive schemes.",
+    ("mandate_audit.csv", "R4_passive_fit"): "R4 is not applicable to active schemes.",
+    ("mandate_audit.csv", "R4_tracking_error_pct"): "R4 tracking error is unavailable for BSE benchmark schemes.",
+    ("mandate_audit.csv", "te_ann"): "Tracking error is unavailable for BSE benchmark schemes.",
+    ("mandate_audit.csv", "R5_closet_indexer_screen"): "Formal R5 is not applicable to passive schemes; proxy heuristic is separate.",
+    ("mandate_audit.csv", "R5_provisional_proxy_heuristic"): "Proxy heuristic is unavailable for passive or BSE benchmark schemes.",
+    ("mandate_audit.csv", "R5_unavailable_reason"): "Formal R5 unavailability reason is not applicable to passive schemes.",
+    ("mandate_audit.csv", "source_doc"): "Legacy source field; detailed provenance is held in dedicated objective and TER provenance columns.",
+    ("mandate_audit.csv", "source_page"): "Legacy source field; detailed provenance is held in dedicated objective and TER provenance columns.",
 }
 
 
@@ -135,13 +180,30 @@ def validate_pack(root: Path = ROOT) -> tuple[list[str], list[str]]:
             missing = frame[col].isna()
             if missing.any():
                 allowed = pd.Series(False, index=frame.index)
-                if (filename, col) in NULL_SEMANTICS:
+                if (filename, col) in NULL_SEMANTICS or filename == "mandate_audit.csv":
                     if filename == "alpha.csv":
                         allowed = frame["is_passive"].astype(str).str.lower().eq("true")
                     elif filename in {"metrics.csv", "capture.csv"}:
                         allowed = frame["benchmark_basis"].eq("estimated_hybrid")
                     elif filename == "rolling_returns.csv":
                         allowed = pd.Series(True, index=frame.index)
+                    elif filename == "mandate_audit.csv":
+                        passive = frame["is_passive"].astype(str).str.lower().eq("true")
+                        bse = frame["benchmark_name"].astype(str).str.startswith("BSE ")
+                        if col in {
+                            "p_bh", "fdr_q", "R1_benchmark_fit",
+                            "R2_peer_risk", "R2_beta_z", "R2_max_dd_z",
+                            "R5_closet_indexer_screen", "R5_unavailable_reason"
+                        }:
+                            allowed = passive
+                        elif col == "R4_passive_fit":
+                            allowed = ~passive
+                        elif col in {"te_ann", "R4_tracking_error_pct"}:
+                            allowed = bse
+                        elif col == "R5_provisional_proxy_heuristic":
+                            allowed = passive | bse
+                        elif col in {"source_doc", "source_page"}:
+                            allowed = pd.Series(True, index=frame.index)
                 _assert((~missing | allowed).all(), f"{filename}.{col} has unexpected missing value", errors)
             if col in DATE_COLS:
                 _assert(pd.to_datetime(frame[col], errors="coerce").notna().all(), f"{filename}.{col} has invalid date", errors)
@@ -170,6 +232,11 @@ def validate_pack(root: Path = ROOT) -> tuple[list[str], list[str]]:
         _assert(len(fee) == 16, f"fee_gap rows={len(fee)}, expected 16", errors)
         _assert(len(control) == 4, f"control_check rows={len(control)}, expected 4", errors)
         _assert(len(frames["glossary.csv"]) == 11, "glossary term count is not 11", errors)
+        _assert(
+            len(frames["mandate_audit.csv"]) == 16,
+            f"mandate_audit rows={len(frames['mandate_audit.csv'])}, expected 16",
+            errors,
+        )
         _assert(len(metrics) == 96, f"metrics rows={len(metrics)}, expected 96", errors)
         _assert(pd.to_numeric(alpha.alpha_ann).abs().lt(1).all(), "alpha_ann is not decimal-scale", errors)
         _assert(pd.to_numeric(metrics.cagr).abs().lt(1).all(), "cagr is not decimal-scale", errors)

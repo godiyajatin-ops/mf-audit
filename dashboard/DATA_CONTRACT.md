@@ -66,7 +66,7 @@ Generated from the same schema definitions used by `src/validate_dashboard_data.
 | `alpha.csv` | One row per scheme plan / `scheme_code` | `alpha_ci_lower` | number | Source field preserved from the A3 result or approved data pack. |
 | `alpha.csv` | One row per scheme plan / `scheme_code` | `alpha_ci_upper` | number | Source field preserved from the A3 result or approved data pack. |
 | `alpha.csv` | One row per scheme plan / `scheme_code` | `beta` | number | Source field preserved from the A3 result or approved data pack. |
-| `alpha.csv` | One row per scheme plan / `scheme_code` | `se_beta` | text | Source field preserved from the A3 result or approved data pack. |
+| `alpha.csv` | One row per scheme plan / `scheme_code` | `se_beta` | number | Source field preserved from the A3 result or approved data pack. |
 | `alpha.csv` | One row per scheme plan / `scheme_code` | `p_value` | number | Source field preserved from the A3 result or approved data pack. |
 | `alpha.csv` | One row per scheme plan / `scheme_code` | `r2` | number | Source field preserved from the A3 result or approved data pack. |
 | `alpha.csv` | One row per scheme plan / `scheme_code` | `n_obs` | number | Source field preserved from the A3 result or approved data pack. |
@@ -160,3 +160,66 @@ Generated from the same schema definitions used by `src/validate_dashboard_data.
 | `glossary.csv` | One row per glossary term / `field` | `field` | text | Source field preserved from the A3 result or approved data pack. |
 | `glossary.csv` | One row per glossary term / `field` | `label` | text | Source field preserved from the A3 result or approved data pack. |
 | `glossary.csv` | One row per glossary term / `field` | `definition` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `scheme_code` | number | Stable scheme-plan key. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `scheme_name` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `amc` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `category` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `representative_plan` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `pair_id` | number | Identifier shared by the Direct and Regular plans. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `is_passive` | boolean | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `benchmark_id` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `benchmark_name` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `benchmark_confirmed` | boolean | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `alpha_ann` | number | Annualized CAPM alpha as a decimal. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `se_alpha_ann` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `alpha_ci_lower` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `alpha_ci_upper` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `beta` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `se_beta` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `p_value` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `r2` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `n_obs` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `nw_lag` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `lb_p10` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `beta_warning` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `provisional` | boolean | True only when the assigned benchmark basis is estimated_hybrid. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `p_bh` | number | Benjamini-Hochberg adjusted p-value. Nullable: No BH family p-value is assigned to passive schemes. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `significant_bh` | boolean | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `fdr_q` | number | Source field preserved from the A3 result or approved data pack. Nullable: No BH family q-value is assigned to passive schemes. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `max_dd` | number | Maximum drawdown as a decimal. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `te_ann` | number | Source field preserved from the A3 result or approved data pack. Nullable: Tracking error is unavailable for BSE benchmark schemes. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `expected_pp` | number | Expected TER gap in percentage points. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `gap_pp` | number | Realized Direct-Regular CAGR gap in percentage points. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `residual_pp` | number | Realized gap less expected TER gap in percentage points. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `amc_facts` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `scheme_base_name` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `category_facts` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `is_passive_facts` | boolean | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `ter_direct_pct` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `ter_regular_pct` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `ter_as_of` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `source_doc` | text | Source field preserved from the A3 result or approved data pack. Nullable: Legacy source field; detailed provenance is held in dedicated objective and TER provenance columns. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `source_page` | number | Source field preserved from the A3 result or approved data pack. Nullable: Legacy source field; detailed provenance is held in dedicated objective and TER provenance columns. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `ber_direct_pct` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `ber_regular_pct` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `ter_direct_source_doc` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `ter_direct_source_sheet` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `ter_direct_source_row` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `ter_regular_source_doc` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `ter_regular_source_sheet` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `ter_regular_source_row` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `objective_evidence_status` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `objective_source_doc_id` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `objective_source_page` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `objective_evidence_note` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `R1_benchmark_fit` | text | Source field preserved from the A3 result or approved data pack. Nullable: R1 is not applicable to passive schemes. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `R2_peer_risk` | text | Source field preserved from the A3 result or approved data pack. Nullable: R2 is not applicable to passive schemes. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `R3_cost_fit` | text | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `R4_passive_fit` | text | Source field preserved from the A3 result or approved data pack. Nullable: R4 is not applicable to active schemes. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `R5_closet_indexer_screen` | text | Source field preserved from the A3 result or approved data pack. Nullable: Formal R5 is not applicable to passive schemes; proxy heuristic is separate. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `R5_provisional_proxy_heuristic` | text | Source field preserved from the A3 result or approved data pack. Nullable: Proxy heuristic is unavailable for passive or BSE benchmark schemes. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `R2_beta_z` | number | Source field preserved from the A3 result or approved data pack. Nullable: R2 beta z-score is not calculated for passive schemes. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `R2_max_dd_z` | number | Source field preserved from the A3 result or approved data pack. Nullable: R2 drawdown z-score is not calculated for passive schemes. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `R3_abs_residual_pp` | number | Source field preserved from the A3 result or approved data pack. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `R4_tracking_error_pct` | number | Source field preserved from the A3 result or approved data pack. Nullable: R4 tracking error is unavailable for BSE benchmark schemes. |
+| `mandate_audit.csv` | One row per scheme-level mandate audit / `scheme_code` | `R5_unavailable_reason` | text | Source field preserved from the A3 result or approved data pack. Nullable: Formal R5 unavailability reason is not applicable to passive schemes. |

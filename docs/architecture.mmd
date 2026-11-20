@@ -1,0 +1,122 @@
+﻿flowchart TD
+    subgraph SOURCES["Data and document sources"]
+        AMFI["AMFI historical NAV data"]
+        TRI["NIFTY TRI and BSE price-index data"]
+        AMC["AMC factsheets and scheme documents"]
+        TER["TER disclosure workbooks"]
+        CONFIG["config.yaml and preregistered rules"]
+    end
+
+    subgraph INGEST["Quantitative data preparation"]
+        UNIVERSE["Universe selection<br/>src/select_universe.py"]
+        MASTER["Scheme master<br/>src/scheme_master.py"]
+        NAVLOAD["NAV and TRI ingestion<br/>src/download_nav.py<br/>src/load_tri.py"]
+        HYBRID["Estimated BSE hybrid loader<br/>src/load_bse_hybrid.py"]
+        VERIFY["Data verification<br/>src/verify_data.py"]
+        TEREXTRACT["TER/BER extraction<br/>scripts/a3_extract_ter.py"]
+        SCHEMEFACTS["Manual scheme facts<br/>data/manual/scheme_facts.csv"]
+    end
+
+    subgraph DB["Analytical data store"]
+        PG[("PostgreSQL<br/>dim_scheme, dim_benchmark,<br/>fact_nav, fact_benchmark_tri,<br/>fact_rf")]
+    end
+
+    subgraph QUANT["Quantitative analysis and audit"]
+        METRICS["Performance and risk metrics<br/>src/metrics_pandas.py"]
+        REG["CAPM regression and FDR<br/>src/regression.py<br/>src/fdr.py"]
+        PERSIST["Performance persistence<br/>src/persistence.py"]
+        FEE["Direct-Regular fee gap<br/>src/fee_gap.py"]
+        MANDATE["Mandate audit<br/>src/mandate_audit.py"]
+        ROBUST["Robustness and control checks<br/>src/robustness.py<br/>src/control_check.py"]
+        EXPORT["Metrics and dashboard exports<br/>src/export_metrics.py<br/>src/export_dashboard_data.py"]
+    end
+
+    subgraph DASH["Reporting"]
+        PACK["Dashboard data pack"]
+        PBI["Power BI dashboard<br/>MF_Audit_Dashboard.pbix"]
+        REPORTS["Reports, figures and CSV results"]
+    end
+
+    subgraph RAG["Document retrieval and answering"]
+        PDF["PDF document corpus"]
+        EXTRACT["PDF ingestion and extraction<br/>src/rag/ingest.py"]
+        ASSIGN["Scheme assignment<br/>src/rag/assign_schemes.py"]
+        CHUNK["Fixed-size chunking<br/>src/rag/chunking.py"]
+        INDEX["Dense embeddings and FAISS<br/>src/rag/embed.py"]
+        BM25["BM25 lexical index<br/>src/rag/bm25.py"]
+        RETRIEVE["Hybrid retrieval and RRF<br/>src/rag/retrieve.py<br/>src/rag/fuse.py"]
+        ANSWER["Evidence-grounded answering<br/>src/rag/answer.py"]
+        GEMINI["Gemini 3.1 Flash-Lite<br/>External generation provider"]
+        EVAL["Retrieval and answer evaluation<br/>src/rag/evaluate.py<br/>eval/"]
+    end
+
+    subgraph APP["Question routing and execution"]
+        ROUTER["Rule-first query router<br/>src/router.py"]
+        OOS["OOS refusal"]
+        NUM["NUM: numeric query plan"]
+        DOC["DOC: document question"]
+        MIX["MIX: combined audit and document question"]
+        SQL["Fixed SQL templates<br/>src/sql_templates.py"]
+        EXEC["Read-only SQL executor<br/>src/sql_executor.py"]
+        RESPONSE["Structured response<br/>SQL results and/or cited evidence"]
+    end
+
+    AMFI --> NAVLOAD
+    TRI --> NAVLOAD
+    TRI --> HYBRID
+    CONFIG --> UNIVERSE
+    UNIVERSE --> MASTER
+    MASTER --> NAVLOAD
+    NAVLOAD --> VERIFY
+    HYBRID --> VERIFY
+    VERIFY --> PG
+
+    TER --> TEREXTRACT
+    TEREXTRACT --> SCHEMEFACTS
+    SCHEMEFACTS --> FEE
+    SCHEMEFACTS --> MANDATE
+
+    PG --> METRICS
+    CONFIG --> METRICS
+    METRICS --> REG
+    METRICS --> PERSIST
+    METRICS --> FEE
+    METRICS --> MANDATE
+    METRICS --> ROBUST
+    REG --> EXPORT
+    PERSIST --> EXPORT
+    FEE --> EXPORT
+    MANDATE --> EXPORT
+    ROBUST --> EXPORT
+    EXPORT --> PACK
+    PACK --> PBI
+    EXPORT --> REPORTS
+
+    AMC --> PDF
+    PDF --> EXTRACT
+    EXTRACT --> ASSIGN
+    ASSIGN --> CHUNK
+    CHUNK --> INDEX
+    CHUNK --> BM25
+    INDEX --> RETRIEVE
+    BM25 --> RETRIEVE
+    RETRIEVE --> ANSWER
+    GEMINI <--> ANSWER
+    ANSWER --> EVAL
+
+    ROUTER --> OOS
+    ROUTER --> NUM
+    ROUTER --> DOC
+    ROUTER --> MIX
+
+    NUM --> SQL
+    MIX --> SQL
+    SQL --> EXEC
+    PG --> EXEC
+    EXEC --> RESPONSE
+
+    DOC --> ANSWER
+    MIX --> MANDATE
+    MIX --> ANSWER
+    ANSWER --> RESPONSE
+    OOS --> RESPONSE
