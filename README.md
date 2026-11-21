@@ -167,7 +167,12 @@ Run the project test suite from the repository root:
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-Some integration tests require a configured PostgreSQL database. Database-dependent tests should be run only when the local database and project environment are configured.
+Recorded verification results are distinct and should not be conflated:
+
+- **Full project suite:** 61 tests passed, as recorded in `reports/failure_analysis.md`.
+- **Clean-clone verification:** 50/50 non-database tests passed against commit `a621532`, using a fresh Python 3.11 environment and locked dependency installation, as recorded in `reports/final_report.md`.
+
+The clean-clone run was a separately scoped offline verification, not a rerun of the full local suite. Some integration tests require a configured PostgreSQL database. Database-dependent tests should be run only when the local database and project environment are configured.
 
 ### B2 evaluation
 
@@ -215,6 +220,19 @@ B1 is recorded as PASS in `PROJECT_STATE.json`. The stage report also documents 
 
 B2 is recorded as PASS. Its evaluation evidence and known limitations are documented in `reports/failure_analysis.md`.
 
+## Release record
+
+| Item | Recorded value |
+|---|---|
+| Release status | Complete with limitations |
+| Research window | 30 October 2021 to 30 October 2026 |
+| Python version | 3.11 |
+| Repository licence | MIT |
+| Stage C closure commit | `0ff5e17` |
+| Clean-clone verification commit | `a621532` |
+
+The Stage C closure commit records completion of packaging and reproducibility work with the limitations described in `PROJECT_STATE.json` and `reports/final_report.md`. The clean-clone verification result applies specifically to commit `a621532`; it should not be represented as a clean-clone test of later commits.
+
 ## Important interpretation notes
 
 - The mandate audit contains **scheme-level** records. Plan-level supporting records must not be counted as additional distinct schemes.
@@ -227,3 +245,5 @@ B2 is recorded as PASS. Its evaluation evidence and known limitations are docume
 ## Licence
 
 This repository is licensed under the [MIT License](LICENSE). Copyright (c) 2026 Jatin Godiya. The licence permits use, modification, distribution, sublicensing, and sale subject to its notice and warranty-disclaimer conditions.
+
+The MIT licence applies to original software and project materials authored for this repository. Third-party datasets, AMC factsheets, documents, trademarks, and other externally sourced materials remain subject to their respective owners' rights, licences, and terms. Their presence in this repository does not grant additional rights to reuse or redistribute them.
