@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import sys
+import os
 
 import numpy as np
 import pandas as pd
@@ -17,9 +18,16 @@ RESULTS.mkdir(exist_ok=True)
 
 load_dotenv(ROOT / ".env")
 
-DATABASE_URL = __import__("os").environ.get("DATABASE_URL")
-if not DATABASE_URL:
-    raise RuntimeError("DATABASE_URL not found in .env")
+_engine = None
+
+def get_engine():
+    global _engine
+    if _engine is None:
+        database_url = os.environ.get("DATABASE_URL")
+        if not database_url:
+            raise RuntimeError("DATABASE_URL not found in .env")
+        _engine = create_engine(database_url)
+    return _engine
 
 with open(ROOT / "config.yaml", "r", encoding="utf-8") as f:
     CONFIG = yaml.safe_load(f)
@@ -28,7 +36,6 @@ WINDOW_END = pd.Timestamp(CONFIG["window"]["end"])
 TRADING_DAYS = 252
 SQRT_252 = np.sqrt(TRADING_DAYS)
 
-engine = create_engine(DATABASE_URL)
 
 
 def fetch_table(table_name: str) -> pd.DataFrame:
@@ -43,7 +50,7 @@ def fetch_table(table_name: str) -> pd.DataFrame:
     if table_name not in allowed:
         raise ValueError(f"Unexpected table: {table_name}")
 
-    with engine.connect() as conn:
+    with get_engine().connect() as conn:
         return pd.read_sql(
             text(f"SELECT * FROM {table_name}"),
             conn,
@@ -362,4 +369,5 @@ if __name__ == "__main__":
     try:
         main()
     finally:
-        engine.dispose()
+        if _engine is not None:
+            _engine.dispose()
