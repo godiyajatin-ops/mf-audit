@@ -3,7 +3,7 @@
 **Project:** mf-audit
 **Research window:** 30 October 2021 to 30 October 2026
 **Release report date:** 21 November 2026
-**Status:** Final packaging in progress
+**Status:** Complete with limitations
 
 ## 1. Executive Summary
 
@@ -24,7 +24,7 @@ The analytical and evaluation stages are complete with documented limitations. F
 | A4 | PASS | Four-page Power BI dashboard and data pack |
 | B1 | Complete with limitations | Document ingestion, extraction and retrieval |
 | B2 | PASS | SQL routing, retrieval evaluation and heldout generation |
-| C | In progress | Packaging, documentation and release verification |
+| C | Complete with limitations | Packaging, documentation and clean-clone verification |
 
 ## 3. Quantitative Research
 
@@ -118,9 +118,21 @@ The packaging workflow includes:
 - Offline tests and database-dependent tests.
 - A clean-clone verification script.
 
-Previously recorded test evidence includes 50 passing offline tests and 61 passing tests in the full environment with database configuration. These are historical results and must not be represented as a new final-release run until the release checks are executed.
+The final clean-clone verification passed against commit `a621532`.
 
-The clean-clone script has passed syntax and encoding checks, but its full execution remains pending.
+The verification used a fresh repository clone and Python 3.11 virtual environment, installed the locked dependencies, and completed the following checks:
+- Offline test suite: 50/50 passed.
+- Packaging and metric-record checks passed.
+- Scheme-plan metric records: 32.
+- Matched Direct-Regular plan pairs: 16.
+- Scheme-level mandate audit records: 16.
+- Development and heldout evaluation values matched their exported CSVs.
+- README numerical verification and command dry-runs passed.
+- `.env` was not tracked; `.env.example` was tracked and contained no detected real secrets.
+- Secrets scan passed across 148 tracked text files and 170 tracked files.
+- Repository size check passed.
+
+The clean-clone verification concluded with `CLEAN CLONE CHECK PASS`. This verifies the tested clean-clone workflow against commit `a621532`; it does not establish that every optional workflow or external service has been tested.
 
 ## 7. Human Review and Release Demonstration
 
@@ -151,6 +163,6 @@ This is an educational research and software project, not investment advice, a r
 
 The quantitative, dashboard and question-answer evaluation stages are recorded as complete, subject to their documented limitations.
 
-Stage C remains open until the final documentation updates, manifest refresh, repository checks, clean-clone verification and release commit have been completed and recorded.
+Stage C packaging and reproducibility checks are complete with limitations. The clean-clone verification passed against commit `a621532`, and the final report and project state record that result.
 
-No claim of a fully reproducible clean-clone release is made before those checks pass.
+The live C11 demo walkthrough was not rehearsed, optional CI setup was skipped, and no Git remote is configured. The release is therefore recorded as a local, verified package with documented limitations; no claim is made that optional CI or remote publication has occurred.

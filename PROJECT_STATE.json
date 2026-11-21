@@ -37,9 +37,9 @@
       "notes": "B2 acceptance completed. Configuration frozen at 2026-11-19T02:13:50.1468344+05:30, freeze commit d0fb39cf42555946a04aff90cf30bf388ba8fa1d. Seed-42 human-reviewed split: 25 dev and 10 heldout questions. Retrieval ablation completed for all six strategy/mode combinations on both splits; strategy A + hybrid selected, with MRR 0.428571 dev and 0.583333 heldout. Gemini 3.1 Flash-Lite generation completed 25/25 dev and 10/10 heldout questions. Heldout: intent accuracy 1.0, refusal accuracy 1.0, false-refusal rate 0.0, DOC/MIX Hit@3 0.5, Hit@5 0.666667, MRR 0.541667, exact gold-page citation rate 0.666667, numeric exactness 1.0. OOS refusals R01-R05 correctly refused. Twenty human faithfulness labels are complete and all are 1 (14 dev DOC/MIX plus six smoke supplements). Mandate audit contains 16 scheme-level rows with 32 Direct/Regular plan-level supporting rows. Query log contains 196 records. Combined eval_summary.csv contains separate dev and heldout rows. PostgreSQL read-only and SQL safety checks passed; full test suite: 61 passed. Documented limitations remain: D09 source discrepancy, missing row-level SQL traces in MIX review rows, M08 composite PRI/TRI history, historical TER disclosure gaps, and formal R5 calibration unavailable (provisional proxy heuristic reported separately)."
     },
     "C": {
-      "status": "TODO",
-      "updated": null,
-      "notes": ""
+      "status": "COMPLETE_WITH_LIMITATIONS",
+      "updated": "2026-11-21",
+      "notes": "Stage C packaging and reproducibility checks completed. Clean-clone verification PASS against commit a621532: fresh Python 3.11 environment, locked dependency installation, 50/50 non-DB tests, packaging checks, secrets scan, repository size check, and README command dry-runs passed. Limitations: C11 live demo walkthrough was not rehearsed; optional CI setup was skipped; no Git remote is configured."
     }
   },
   "decisions": {
