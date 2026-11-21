@@ -163,6 +163,10 @@ L=\left\lfloor4(T/100)^{2/9}\right\rfloor
 
 where \(T\) is the number of observations in the regression.
 
+The implementation is in `src/regression.py`. It uses `statsmodels.api.OLS` to estimate the CAPM coefficients and calls `.fit(cov_type="HAC", cov_kwds={"maxlags": L})` to obtain Newey-West HAC covariance estimates. The lag count is calculated separately for each scheme from that regression's aligned, non-missing observation count (`T`). The resulting HAC standard errors are used for the alpha and beta inference; the alpha confidence interval and p-value are also taken from the fitted model. Daily alpha and its standard error/confidence interval are annualized by multiplying by 252. The model's R-squared remains the ordinary OLS R-squared.
+
+The implementation also reports a Ljung-Box residual autocorrelation diagnostic at lag 10 (`lb_p10`). This is a separate diagnostic and is not the Newey-West correction itself.
+
 The primary multiple-testing family consists of the **12 active Direct-Growth schemes**. Benjamini-Hochberg false-discovery-rate adjustment is applied at \(q=0.10\). Regular-Growth results are treated as a separate family rather than added to the primary family.
 
 ## 10. Persistence analysis
