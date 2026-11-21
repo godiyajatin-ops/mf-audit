@@ -205,13 +205,13 @@ Some directories and files may be omitted from version control where they contai
 | A2 | Quantitative metrics and validation | PASS |
 | A3 | Statistical analysis and audit framework | Complete with limitations |
 | A4 | Power BI dashboard | PASS |
-| B1 | Document corpus and retrieval pipeline | Complete with limitations |
+| B1 | Document corpus and retrieval pipeline | PASS |
 | B2 | Retrieval and answer evaluation | PASS |
 | C | Packaging, reproducibility and final release | Complete with limitations |
 
 ### Stage-status qualification
 
-B1 is recorded as complete with limitations because the Hit@3 acceptance target was not achieved and extraction, metadata, and orchestration limitations remain documented in `reports/stage_B1_report.md`. The retrieval work is complete, but its Hit@3 acceptance target was not met.
+B1 is recorded as PASS in `PROJECT_STATE.json`. The stage report also documents retained limitations: the Hit@3 acceptance target was not achieved, and extraction, metadata, and orchestration gaps remain. PASS reflects the project's recorded stage disposition; it does not mean every retrieval-quality target was achieved.
 
 B2 is recorded as PASS. Its evaluation evidence and known limitations are documented in `reports/failure_analysis.md`.
 
