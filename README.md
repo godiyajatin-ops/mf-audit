@@ -201,17 +201,17 @@ Some directories and files may be omitted from version control where they contai
 | Stage | Description | Recorded status |
 |---|---|---|
 | Stage 0 | Research setup and preregistration | Complete with limitations |
-| A1 | Data acquisition and universe construction | PASS |
+| A1 | Data acquisition and universe construction | PASS (inherited pytest collection issue remains open) |
 | A2 | Quantitative metrics and validation | PASS |
 | A3 | Statistical analysis and audit framework | Complete with limitations |
 | A4 | Power BI dashboard | PASS |
 | B1 | Document corpus and retrieval pipeline | Complete with limitations |
 | B2 | Retrieval and answer evaluation | PASS |
-| C | Packaging, reproducibility and final release | In progress |
+| C | Packaging, reproducibility and final release | Complete with limitations |
 
 ### Stage-status qualification
 
-The project state file records B1 as `PASS`, while `reports/stage_B1_report.md` closes the stage as `COMPLETE_WITH_LIMITATIONS`. The stage report records that the Hit@3 acceptance target was not achieved and documents additional extraction, metadata, and orchestration limitations. This README uses the more conservative status until that discrepancy is formally reconciled.
+B1 is recorded as complete with limitations because the Hit@3 acceptance target was not achieved and extraction, metadata, and orchestration limitations remain documented in `reports/stage_B1_report.md`. The retrieval work is complete, but its Hit@3 acceptance target was not met.
 
 B2 is recorded as PASS. Its evaluation evidence and known limitations are documented in `reports/failure_analysis.md`.
 
@@ -226,4 +226,4 @@ B2 is recorded as PASS. Its evaluation evidence and known limitations are docume
 
 ## Licence
 
-No open-source licence has been assigned to this repository. Until a licence is added, do not assume that the code, documentation, or project materials are available for unrestricted reuse.
+This repository is licensed under the [MIT License](LICENSE). Copyright (c) 2026 Jatin Godiya. The licence permits use, modification, distribution, sublicensing, and sale subject to its notice and warranty-disclaimer conditions.
